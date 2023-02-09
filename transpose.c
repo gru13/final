@@ -6,22 +6,22 @@ int main(){
     puts("Enter r1, c1,: ");
     scanf("%d %d", &r1, &c1);
 
-    int a[r1][c1], c[r1*r2],p=0;
-    //  'b' is flatten array and 'p' is index cursor of 'b'
+    int a[r1][c1], b[c1][r1];
 
     // getting value for matrix A
     for (int i = 0; i < r1; i++){
         for(int j = 0; j < c1; j++){
             printf("Enter the value of mat A [%d][%d] : ", i, j);
             scanf("%d", &a[i][j]);
-            c[p] = a[i][j];
-            p++;
+            b[j][i] = a[i][j];
+
         }
     }
 
-    // printing the matrix 
-    for (int i = 0; i < r1*c1; i++){
-        printf("%d\t", c[i]);
+    for (int i = 0; i < c1; i++){
+        for(int j = 0; j < r1; j++){
+            printf("%d\t",b[i][j]);
+        }
+        printf("\n");
     }
-
 }
