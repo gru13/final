@@ -9,7 +9,7 @@ int main(){
         c[i] = a[i];
         i++;
     } 
-    while(b[j]!=0){
+    while(b[j]!='\0'){
         c[i] = b[j];
         i++;
         j++;
