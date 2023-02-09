@@ -16,7 +16,7 @@ int main(){
         printf("Enter the value for array a[] : ", i);
         scanf("%d",&a[i]);
     }
-
+//  bubble sorting algorithm
     for(int i = 0;i<len-1;i++){
         for(int j = 0;j<len-i;j++){
             if (a[j]>a[j+1]){
