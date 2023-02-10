@@ -9,9 +9,16 @@ int main(){
         return 1;
     }
     char ch;
-    ch = fgetc(f); 
+    char st[100];
+    char *s = st;
+
+    ch = fgetc(f);
+     
     while(ch != EOF){
-        printf("%c",ch);
+        *s = ch;
+        s++;
         ch = fgetc(f);
-    }   
+    }  
+    *s = '\0';
+    puts(st);
 }
